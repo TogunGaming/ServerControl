@@ -1,0 +1,5 @@
+name: ServerControl
+version: '${project.version}'
+main: eu.togun.serverControl
+description: Control your pufferpanel servers in-game!
+author: Togun
