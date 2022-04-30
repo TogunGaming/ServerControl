@@ -1,4 +1,4 @@
-package eu.togun;
+package eu.togun.commands;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
