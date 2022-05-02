@@ -2,4 +2,7 @@ name: ServerControl
 version: '0.2.1'
 main: eu.togun.serverControl
 description: Control your pufferpanel servers in-game!
-author: Togun
+author: TogunGaming
+commands:
+  ping:
+  pufcon:
