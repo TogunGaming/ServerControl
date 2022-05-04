@@ -1,12 +1,13 @@
 package eu.togun.commands;
 
+// Message Sender Dependencies
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
 
-//
+// Http Request Libraries
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.http.HttpRequest;
@@ -27,8 +28,8 @@ public class controlCommand extends Command {
                     .timeout(Duration.of(10, SECONDS))
                     .GET()
                     .build();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
+        } catch (URISyntaxException err) {
+            err.printStackTrace();
         }
     }
 }
