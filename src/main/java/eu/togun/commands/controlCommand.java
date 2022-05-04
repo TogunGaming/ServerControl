@@ -1,12 +1,13 @@
 package eu.togun.commands;
 
+// Message Sender Dependencies
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
 
-//
+// Http Request Libraries
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.http.HttpRequest;
