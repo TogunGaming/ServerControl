@@ -27,8 +27,8 @@ public class controlCommand extends Command {
                     .timeout(Duration.of(10, SECONDS))
                     .GET()
                     .build();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
+        } catch (URISyntaxException err) {
+            err.printStackTrace();
         }
     }
 }
