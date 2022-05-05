@@ -1,6 +1,6 @@
 package eu.togun.commands;
 
-// Message Sender Dependencies
+// Message Sender Libraries
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -14,9 +14,9 @@ import java.net.http.HttpRequest;
 import java.time.Duration;
 import static java.time.temporal.ChronoUnit.SECONDS;
 
-public class controlCommand extends Command {
+public class pserversCommand extends Command {
 
-    public controlCommand() {
+    public pserversCommand() {
         super("pservers");
     }
 
@@ -28,7 +28,6 @@ public class controlCommand extends Command {
                     .timeout(Duration.of(10, SECONDS))
                     .GET()
                     .build();
-                    int output = .output();
         } catch (URISyntaxException err) {
             err.printStackTrace();
         }
@@ -36,7 +35,7 @@ public class controlCommand extends Command {
         if (commandSender instanceof ProxiedPlayer) {
             ProxiedPlayer player = (ProxiedPlayer) commandSender;
 
-            player.sendMessage(new TextComponent(ChatColor.GRAY + "Server List: " + ChatColor.GREEN + output));
+            player.sendMessage(new TextComponent(ChatColor.GRAY + "Server List: " + ChatColor.RED + "Error"));
         }
     }
 }
