@@ -17,7 +17,7 @@ import static java.time.temporal.ChronoUnit.SECONDS;
 public class controlCommand extends Command {
 
     public controlCommand() {
-        super("pufcon");
+        super("pservers");
     }
 
     @Override
@@ -28,14 +28,15 @@ public class controlCommand extends Command {
                     .timeout(Duration.of(10, SECONDS))
                     .GET()
                     .build();
+                    int output = .output();
         } catch (URISyntaxException err) {
             err.printStackTrace();
         }
-        
+
         if (commandSender instanceof ProxiedPlayer) {
             ProxiedPlayer player = (ProxiedPlayer) commandSender;
 
-            player.sendMessage(new TextComponent(ChatColor.GRAY + "Server List: " + ChatColor.GREEN + ping));
+            player.sendMessage(new TextComponent(ChatColor.GRAY + "Server List: " + ChatColor.GREEN + output));
         }
     }
 }
